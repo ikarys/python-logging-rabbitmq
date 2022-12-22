@@ -144,8 +144,8 @@ class RabbitMQHandler(logging.Handler):
 
             if hasattr(record, 'request'):
                 no_exc_record = copy(record)
-                del no_exc_record.exc_info
-                del no_exc_record.exc_text
+                #del no_exc_record.exc_info
+                #del no_exc_record.exc_text
                 del no_exc_record.request
 
                 if record.exc_info:
